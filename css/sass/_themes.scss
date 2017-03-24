@@ -1,0 +1,104 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+
+$primary-color:#2c71bb;
+$white:#fff;
+$secondary-color:#e3f7fe;
+
+body {
+	font-family:'robotomedium_italic', arial, georgia, sans-serif;
+	font-size:16px;
+	background-color: $secondary-color;
+}
+
+.userfeedbk {
+	.js & {
+		display: none;
+	}
+}
+
+.wrapper {
+	max-width:900px;
+	padding:0 30px;
+	margin:0 auto;
+	h1 {
+		text-align: center;
+		 color: #333;
+	}
+}
+
+.form-wrap {
+	padding:20px 0;
+	label {
+		display:block;
+		margin:10px 0;
+	}
+	input[type="button"] {
+		background-color:$primary-color;
+		color:$white;
+		border:1px solid #ccc;
+	}
+	input[type="button"], input[type="text"] {
+		padding:10px;
+		width:100%;
+		&:hover, &:focus {
+			opacity:0.8;
+		}
+	}
+}
+
+.geolocate {
+	padding:10px;
+	text-decoration:none;
+	background-color:$primary-color;
+	color:$white;
+	width:100%;
+	display:block;
+	text-align:center;
+	&:hover, &:focus {
+		opacity:0.8;
+	}
+}
+
+#map-canvas {
+	max-width:800px;
+	height:500px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.45);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.45);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.45);
+}
+
+.info-panel {
+	padding:10px;
+}
+
+@media only screen and (min-width: 49em), only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	.form-wrap {
+		padding:20px 0;
+		label {
+			display:inline-block;
+		}
+		input[type="text"] {
+			width:30%;
+		}
+		input[type="button"] {
+			padding:10px;
+			width:inherit;
+		}
+	}
+	.geolocate {
+		display:inline-block;
+		width:inherit;
+	}
+}
